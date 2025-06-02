@@ -1,197 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <header>
-        <div class="Logo">
-            <img src="./Images/logo.png" alt="">
-        </div>
-        <nav class="nav">
-            <a href="#" class="navlink">Home</a>
-            <a href="#" class="navlink">Skills</a>
-            <a href="#" class="navlink">Education</a>
-            <a href="#" class="navlink">Projects</a>
-            <a href="#" class="navlink">Recommendations</a>
-            <a href="#" class="navlink">Contact</a>
-        </nav>
+      <div class="Logo">
+        <img src="./Images/logo.png" />
+      </div>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+      <nav class="nav">
+        <a href="#" class="navlink">Home</a>
+        <a href="#" class="navlink">Skills</a>
+        <a href="#" class="navlink">Education</a>
+        <a href="#" class="navlink">Projects</a>
+        <a href="#" class="navlink">Recommendations</a>
+        <a href="#" class="navlink">Contact</a>
+      </nav>
     </header>
     <section class="Hero">
-        <div class="banner-text">
-            <p class="Hero-heading">I'm Rayan Adlrdard </p>
-            <p class="Hero-heading"><span class="highlight">Front-end</span> Developer</p>
-            <p class="Hero-subheading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae blanditiis, cum repellat ex voluptas officia atque sit debitis modi voluptatem debitis  </p>
-            <button class="Hire-btn">HIRE ME -></button>
-        </div>
-        <div class="banner-img">
-            <img src="./Images/banner-img-1.png" alt="">
-        </div>
+      <div class="banner-text">
+        <p class="Hero-heading">I'm Rayan Adlrdard</p>
+        <p class="Hero-heading">
+          <span class="highlight">Front-end</span> Developer
+        </p>
+        <p class="Hero-subheading">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+          blanditiis, cum repellat ex voluptas officia atque sit debitis modi
+          voluptatem debitis
+        </p>
+        <button class="Hire-btn">HIRE ME -></button>
+      </div>
+      <div class="banner-img">
+        <img src="./Images/banner-img-1.png" alt="" />
+      </div>
     </section>
 
     <section class="Projects">
-        <h1 class="Project-Heading">Projects</h1>
-        <h2 class="Project-subHeading">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique dolorum odit voluptatem facere libero blanditiis at quibusdam vero odio voluptatibus.</h2>
-        <div class="card-container">
-                <div class="card">
-                    <div class="card-img">
-                        <img src="./Images/card 1.jpg" alt="">
-                    </div>
-                    <div class="card-text">
-                        <p class="cardHeader">How To Make Flyer Design</p>
-                        <p class="cardSubHeading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis.</p>
-                        <div class="tag-container">
-                            <span class="tag">HTML</span>
-                            <span class="tag">React</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Typescript</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Javascript</span>
-                        </div>
-                    </div>
-                </div>
-                 <div class="card">
-                    <div class="card-img">
-                        <img src="./Images/card 2.jpg" alt="">
-                    </div>
-                    <div class="card-text">
-                        <p class="cardHeader">How To Make Flyer Design</p>
-                        <p class="cardSubHeading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis.</p>
-                        <div class="tag-container">
-                            <span class="tag">NextJs</span>
-                            <span class="tag">React</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Typescript</span>
-                            
-                        </div>
-                    </div>
-                </div>
-                 <div class="card">
-                    <div class="card-img">
-                        <img src="./Images/card 3.jpg" alt="">
-                    </div>
-                    <div class="card-text">
-                        <p class="cardHeader">How To Make Flyer Design</p>
-                        <p class="cardSubHeading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis.</p>
-                        <div class="tag-container">
-                            <span class="tag">HTML</span>
-                            <span class="tag">React</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Typescript</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Javascript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <img src="./Images/card 4.jpg" alt="">
-                    </div>
-                    <div class="card-text">
-                        <p class="cardHeader">How To Make Flyer Design</p>
-                        <p class="cardSubHeading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis.</p>
-                        <div class="tag-container">
-                            <span class="tag">HTML</span>
-                            <span class="tag">React</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Typescript</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Javascript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <img src="./Images/card 5.jpg" alt="">
-                    </div>
-                    <div class="card-text">
-                        <p class="cardHeader">How To Make Flyer Design</p>
-                        <p class="cardSubHeading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis.</p>
-                        <div class="tag-container">
-                            <span class="tag">HTML</span>
-                            <span class="tag">React</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Typescript</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Javascript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-img">
-                        <img src="./Images/card 6.jpg" alt="">
-                    </div>
-                    <div class="card-text">
-                        <p class="cardHeader">How To Make Flyer Design</p>
-                        <p class="cardSubHeading">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, perferendis.</p>
-                        <div class="tag-container">
-                            <span class="tag">HTML</span>
-                            <span class="tag">React</span>
-                            <span class="tag">MongoDB</span>
-                            <span class="tag">Typescript</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Javascript</span>
-                        </div>
-                    </div>
-                </div>
+      <h1 class="Project-Heading">Projects</h1>
+      <h2 class="Project-subHeading">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        dolorum odit voluptatem facere libero blanditiis at quibusdam vero odio
+        voluptatibus.
+      </h2>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-img">
+            <img src="./Images/card 1.jpg" alt="" />
+          </div>
+          <div class="card-text">
+            <p class="cardHeader">How To Make Flyer Design</p>
+            <p class="cardSubHeading">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              perferendis.
+            </p>
+            <div class="tag-container">
+              <span class="tag">HTML</span>
+              <span class="tag">React</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Typescript</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Javascript</span>
+            </div>
+          </div>
         </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./Images/card 2.jpg" alt="" />
+          </div>
+          <div class="card-text">
+            <p class="cardHeader">How To Make Flyer Design</p>
+            <p class="cardSubHeading">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              perferendis.
+            </p>
+            <div class="tag-container">
+              <span class="tag">NextJs</span>
+              <span class="tag">React</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Typescript</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-img">
+            <img src="./Images/card 3.jpg" alt="" />
+          </div>
+          <div class="card-text">
+            <p class="cardHeader">How To Make Flyer Design</p>
+            <p class="cardSubHeading">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              perferendis.
+            </p>
+            <div class="tag-container">
+              <span class="tag">HTML</span>
+              <span class="tag">React</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Typescript</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Javascript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="./Images/card 4.jpg" alt="" />
+          </div>
+          <div class="card-text">
+            <p class="cardHeader">How To Make Flyer Design</p>
+            <p class="cardSubHeading">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              perferendis.
+            </p>
+            <div class="tag-container">
+              <span class="tag">HTML</span>
+              <span class="tag">React</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Typescript</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Javascript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="./Images/card 5.jpg" alt="" />
+          </div>
+          <div class="card-text">
+            <p class="cardHeader">How To Make Flyer Design</p>
+            <p class="cardSubHeading">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              perferendis.
+            </p>
+            <div class="tag-container">
+              <span class="tag">HTML</span>
+              <span class="tag">React</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Typescript</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Javascript</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-img">
+            <img src="./Images/card 6.jpg" alt="" />
+          </div>
+          <div class="card-text">
+            <p class="cardHeader">How To Make Flyer Design</p>
+            <p class="cardSubHeading">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
+              perferendis.
+            </p>
+            <div class="tag-container">
+              <span class="tag">HTML</span>
+              <span class="tag">React</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Typescript</span>
+              <span class="tag">CSS</span>
+              <span class="tag">Javascript</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
     <section class="Recommendations">
-        <h1 class="Project-Heading">Recommendations</h1>
-        <h2 class="Project-subHeading">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique dolorum odit voluptatem facere libero blanditiis at quibusdam vero odio voluptatibus.</h2>
-        <div class="slider">
-                <div class="slider-card">
-                    <div class="star"> * * * * *</div>
-                    <p class="card-comment">Great Quality!</p>
-                    <p class="card-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, laborum magnam. Rem consequuntur dolor distinctio deleniti beatae autem </p>
-                    <div class="profile">
-                        <div class="profile-pic">
-                            <img src="./Images/card 1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <p class="userName">James Gouse</p>
-                            <p class="userDesignation">Graphic Designer</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="slider-card">
-                    <div class="star"> * * * * *</div>
-                    <p class="card-comment">Great Quality!</p>
-                    <p class="card-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, laborum magnam. Rem consequuntur dolor distinctio deleniti beatae autem </p>
-                    <div class="profile">
-                        <div class="profile-pic">
-                            <img src="./Images/card 1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <p class="userName">James Gouse</p>
-                            <p class="userDesignation">Graphic Designer</p>
-                        </div>
-                    </div>
-                </div>
-                 <div class="slider-card">
-                    <div class="star"> * * * * *</div>
-                    <p class="card-comment">Great Quality!</p>
-                    <p class="card-content">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde, laborum magnam. Rem consequuntur dolor distinctio deleniti beatae autem </p>
-                    <div class="profile">
-                        <div class="profile-pic">
-                            <img src="./Images/card 1.jpg" alt="">
-                        </div>
-                        <div class="profile-info">
-                            <p class="userName">James Gouse</p>
-                            <p class="userDesignation">Graphic Designer</p>
-                        </div>
-                    </div>
-                </div>
-                
+      <h1 class="Project-Heading">Recommendations</h1>
+      <h2 class="Project-subHeading">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique
+        dolorum odit voluptatem facere libero blanditiis at quibusdam vero odio
+        voluptatibus.
+      </h2>
+      <div class="slider">
+        <div class="slider-card">
+          <div class="star">* * * * *</div>
+          <p class="card-comment">Great Quality!</p>
+          <p class="card-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
+            laborum magnam. Rem consequuntur dolor distinctio deleniti beatae
+            autem
+          </p>
+          <div class="profile">
+            <div class="profile-pic">
+              <img src="./Images/card 1.jpg" alt="" />
+            </div>
+            <div class="profile-info">
+              <p class="userName">James Gouse</p>
+              <p class="userDesignation">Graphic Designer</p>
+            </div>
+          </div>
         </div>
+        <div class="slider-card">
+          <div class="star">* * * * *</div>
+          <p class="card-comment">Great Quality!</p>
+          <p class="card-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
+            laborum magnam. Rem consequuntur dolor distinctio deleniti beatae
+            autem
+          </p>
+          <div class="profile">
+            <div class="profile-pic">
+              <img src="./Images/card 1.jpg" alt="" />
+            </div>
+            <div class="profile-info">
+              <p class="userName">James Gouse</p>
+              <p class="userDesignation">Graphic Designer</p>
+            </div>
+          </div>
+        </div>
+        <div class="slider-card">
+          <div class="star">* * * * *</div>
+          <p class="card-comment">Great Quality!</p>
+          <p class="card-content">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde,
+            laborum magnam. Rem consequuntur dolor distinctio deleniti beatae
+            autem
+          </p>
+          <div class="profile">
+            <div class="profile-pic">
+              <img src="./Images/card 1.jpg" alt="" />
+            </div>
+            <div class="profile-info">
+              <p class="userName">James Gouse</p>
+              <p class="userDesignation">Graphic Designer</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    
-</body>
+
+    <script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav');
+    const body = document.body;
+
+    nav.classList.toggle('active');
+
+    if (nav.classList.contains('active')) {
+      body.classList.add('no-scroll');
+    } else {
+      body.classList.remove('no-scroll');
+    }
+  }
+</script>
+
+  </body>
 </html>

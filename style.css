@@ -1,6 +1,8 @@
 :root {
   --yellow: #ffb400;
   --gray: #f0f0f6;
+  --dark: #2b2b2b;
+  --light: #7e7d7d;
 }
 
 * {
@@ -17,6 +19,11 @@ body {
   overflow-x: hidden;
   background-color: var(--gray);
 }
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
 
 /* Header Section */
 header {
@@ -29,6 +36,13 @@ header {
   background-color: white;
   box-shadow: 0px 2px 2px #e8e9e9;
   flex-wrap: wrap;
+}
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .Logo {
@@ -52,6 +66,7 @@ nav {
   text-decoration: none;
   padding: 10px 13px;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
 .navlink:hover {
   background-color: var(--yellow);
@@ -76,7 +91,7 @@ nav {
 .Hero-heading {
   font-size: 3rem;
   font-weight: 600;
-  color: #2b2b2b;
+  color: var(--dark);
 }
 
 .Hero-subheading {
@@ -93,7 +108,9 @@ nav {
   background-color: var(--yellow);
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
+
 .highlight {
   color: var(--yellow);
 }
@@ -102,6 +119,7 @@ nav {
   flex: 1 1 300px;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   padding: 1rem;
 }
 .banner-img img {
@@ -116,13 +134,14 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2% 2%;
+  padding: 2% 5%;
 }
 
 .Project-Heading {
   font-size: 2rem;
   margin-bottom: 0.9rem;
   color: #323232;
+  text-align: center;
 }
 
 .Project-subHeading {
@@ -137,10 +156,9 @@ nav {
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 3.5rem;
+  gap: 2rem;
   justify-content: center;
   width: 100%;
-  max-width: 1200px;
 }
 
 .card {
@@ -149,7 +167,7 @@ nav {
   max-width: 320px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.557);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .card-img img {
@@ -159,16 +177,16 @@ nav {
 
 .card-text {
   padding: 1rem;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
 }
 .cardHeader {
-  font-size: 1rem;
-  color: #2b2b2b;
+  font-size: 1.1rem;
+  color: var(--dark);
   margin-bottom: 0.4rem;
 }
 .cardSubHeading {
   font-size: 0.85rem;
-  color: #7e7d7d;
+  color: var(--light);
 }
 .tag-container {
   margin-top: 0.7rem;
@@ -184,75 +202,99 @@ nav {
   border: 1px solid #d1d1d1;
 }
 
+/* Recommendations Section */
 .Recommendations {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2% 2%;
+  padding: 2% 5%;
 }
+
 .slider {
-  width: 90%;
-  margin-top: 1rem;
-  padding: 2rem 1rem;
+  width: 100%;
+  margin-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
+
 .slider-card {
   display: flex;
   flex-direction: column;
   background: white;
-  width: 100%;
   padding: 1.5rem;
   max-width: 300px;
-  overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.114);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+
 .card-comment {
   font-weight: bold;
   margin-bottom: 1rem;
 }
 .card-content {
   font-size: 0.9rem;
-  color: #7e7d7d;
+  color: var(--light);
   margin-bottom: 1rem;
 }
+
 .profile {
   display: flex;
   align-items: center;
 }
 .profile-pic {
-    margin-right: 1rem;
-    max-width: 25%;
-    height: 65px;
-    width: 75px;
-    border-radius: 50%; 
-    overflow: hidden;
+  margin-right: 1rem;
+  max-width: 65px;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  overflow: hidden;
 }
-.profile-pic img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.userName{
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+.userName {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
 }
-.userDesignation{
-    font-size: 0.9rem;
-    color: #7e7d7d;
+.userDesignation {
+  font-size: 0.85rem;
+  color: var(--light);
 }
+
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    align-items: flex-end;
   }
 
-  .Logo {
-    width: 100%;
+  .Logo{
+    display: none;
+  }
+  .nav {
+    flex-direction: column;
+    width: 50%;
+    display: none; /* hidden by default */
+    gap: 0;
+  }
+  .nav.active {
     display: flex;
-    justify-content: center;
+  }
+    .navlink {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .menu-toggle {
+    display: block;
+    align-self: flex-end;
+    margin-top: 1rem;
   }
 
   nav {
@@ -263,7 +305,7 @@ nav {
   }
 
   .Hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
@@ -275,6 +317,12 @@ nav {
 
   .Hero-heading {
     font-size: 2rem;
+    text-align: center;
+  }
+
+  .Hero-subheading {
+    text-align: center;
+    margin: 2rem 0;
   }
 
   .Hire-btn {
@@ -284,5 +332,15 @@ nav {
 
   .Project-subHeading {
     width: 90%;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider {
+    flex-direction: column;
+    align-items: center;
   }
 }
