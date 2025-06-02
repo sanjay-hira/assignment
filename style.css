@@ -1,6 +1,8 @@
 :root {
   --yellow: #ffb400;
   --gray: #f0f0f6;
+  --dark: #2b2b2b;
+  --light: #7e7d7d;
 }
 
 * {
@@ -10,17 +12,21 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-html,
-body {
+html, body {
   max-width: 100%;
   height: 100%;
   overflow-x: hidden;
   background-color: var(--gray);
 }
 
-/* Header Section */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* ========== Header Section ========== */
 header {
-  min-height: 18vh;
+  min-height: 15vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -31,15 +37,24 @@ header {
   flex-wrap: wrap;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 .Logo {
   flex: 1 1 200px;
 }
+
 .Logo img {
   width: 100%;
   max-width: 150px;
 }
 
-nav {
+.nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -52,15 +67,17 @@ nav {
   text-decoration: none;
   padding: 10px 13px;
   border-radius: 5px;
+  transition: background 0.3s ease;
 }
+
 .navlink:hover {
   background-color: var(--yellow);
 }
 
-/* Hero Section */
+/* ========== Hero Section ========== */
 .Hero {
   width: 100%;
-  min-height: 80vh;
+  min-height: 70vh;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
@@ -74,9 +91,9 @@ nav {
 }
 
 .Hero-heading {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 600;
-  color: #2b2b2b;
+  color: var(--dark);
 }
 
 .Hero-subheading {
@@ -93,7 +110,9 @@ nav {
   background-color: var(--yellow);
   border: none;
   border-radius: 5px;
+  cursor: pointer;
 }
+
 .highlight {
   color: var(--yellow);
 }
@@ -102,27 +121,30 @@ nav {
   flex: 1 1 300px;
   display: flex;
   align-items: flex-end;
+  justify-content: center;
   padding: 1rem;
 }
+
 .banner-img img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-/* Projects Section */
+/* ========== Projects Section ========== */
 .Projects {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2% 2%;
+  padding: 2% 5%;
 }
 
 .Project-Heading {
   font-size: 2rem;
   margin-bottom: 0.9rem;
   color: #323232;
+  text-align: center;
 }
 
 .Project-subHeading {
@@ -137,10 +159,9 @@ nav {
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 3.5rem;
+  gap: 2rem;
   justify-content: center;
   width: 100%;
-  max-width: 1200px;
 }
 
 .card {
@@ -149,7 +170,7 @@ nav {
   max-width: 320px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.557);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .card-img img {
@@ -159,23 +180,27 @@ nav {
 
 .card-text {
   padding: 1rem;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
 }
+
 .cardHeader {
-  font-size: 1rem;
-  color: #2b2b2b;
+  font-size: 1.1rem;
+  color: var(--dark);
   margin-bottom: 0.4rem;
 }
+
 .cardSubHeading {
   font-size: 0.85rem;
-  color: #7e7d7d;
+  color: var(--light);
 }
+
 .tag-container {
   margin-top: 0.7rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
+
 .tag {
   font-size: 0.7rem;
   padding: 0.1rem 0.5rem;
@@ -184,97 +209,176 @@ nav {
   border: 1px solid #d1d1d1;
 }
 
+/* ========== Recommendations Section ========== */
 .Recommendations {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2% 2%;
+  padding: 2% 5%;
 }
+
 .slider {
-  width: 90%;
-  margin-top: 1rem;
-  padding: 2rem 1rem;
+  width: 100%;
+  margin-top: 2rem;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
 }
+
 .slider-card {
   display: flex;
   flex-direction: column;
   background: white;
-  width: 100%;
   padding: 1.5rem;
   max-width: 300px;
-  overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.114);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+.slider-card .star img{
+    width: 8%;
+}
+
 .card-comment {
   font-weight: bold;
   margin-bottom: 1rem;
 }
+
 .card-content {
   font-size: 0.9rem;
-  color: #7e7d7d;
+  color: var(--light);
   margin-bottom: 1rem;
 }
+
 .profile {
   display: flex;
   align-items: center;
 }
+
 .profile-pic {
-    margin-right: 1rem;
-    max-width: 25%;
-    height: 65px;
-    width: 75px;
-    border-radius: 50%; 
-    overflow: hidden;
+  margin-right: 1rem;
+  max-width: 65px;
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+  overflow: hidden;
 }
-.profile-pic img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.userName{
-    font-weight: bold;
-    margin-bottom: 0.5rem;
+
+.userName {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
 }
-.userDesignation{
-    font-size: 0.9rem;
-    color: #7e7d7d;
+
+.userDesignation {
+  font-size: 0.85rem;
+  color: var(--light);
 }
-/* RESPONSIVE BREAKPOINTS */
+
+/* ========== Responsive ========== */
+/* Small Devices (Mobile) */
 @media (max-width: 768px) {
   header {
+    align-items: center;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
   }
 
-  .Logo {
+  .Logo img {
+    width: 70%;
+  }
+
+  .nav {
+    flex-direction: column;
     width: 100%;
+    display: none;
+  }
+
+  .nav.active {
     display: flex;
-    justify-content: center;
   }
 
-  nav {
+  .navlink {
+    padding: 10px;
+    border-top: 1px solid #ddd;
     width: 100%;
-    justify-content: center;
-    gap: 10px;
-    padding-top: 1rem;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
   }
 
   .Hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
   }
 
   .banner-text,
   .banner-img {
-    width: 90%;
+    width: 100%;
     padding: 5%;
   }
 
   .Hero-heading {
     font-size: 2rem;
+    text-align: center;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  header {
+    align-items: center ;
+  }
+
+  .Logo .img{
+    width: 70%;
+  }
+
+  .nav {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .navlink {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .Hero {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .banner-text, .banner-img {
+    width: 100%;
+    padding: 5%;
+  }
+
+  .Hero-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .Hero-subheading {
+    text-align: center;
+    margin: 2rem 0;
   }
 
   .Hire-btn {
@@ -284,5 +388,97 @@ nav {
 
   .Project-subHeading {
     width: 90%;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .slider {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ========== Large Devices ========== */
+@media (min-width: 1400px) {
+  header {
+    padding-inline: 10%;
+  }
+
+  .Hero-heading {
+    font-size: 3rem;
+  }
+
+  .Hero-subheading {
+    font-size: 1.2rem;
+    margin: 3rem 0;
+  }
+
+  .Hire-btn {
+    font-size: 1rem;
+    padding: 18px 24px;
+  }
+
+  .banner-text {
+    padding: 5% 10%;
+  }
+  .banner-img{
+    align-items: center;
+  }
+
+  .banner-img img {
+    max-width: 500px;
+  }
+
+  .Projects {
+    padding: 4% 10%;
+  }
+
+  .Project-Heading {
+    font-size: 2.5rem;
+  }
+
+  .Project-subHeading {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+
+  .card-container {
+    gap: 2.5rem;
+  }
+
+  .card {
+    max-width: 350px;
+  }
+
+  .Recommendations {
+    padding: 4% 10%;
+  }
+
+  .slider {
+    gap: 2.5rem;
+  }
+
+  .slider-card {
+    max-width: 340px;
+    padding: 2rem;
+  }
+
+  .card-comment {
+    font-size: 1.1rem;
+  }
+
+  .card-content {
+    font-size: 1rem;
+  }
+
+  .userName {
+    font-size: 1.1rem;
+  }
+
+  .userDesignation {
+    font-size: 0.95rem;
   }
 }
