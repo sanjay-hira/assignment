@@ -234,6 +234,9 @@ header {
   max-width: 300px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
+.slider-card .star img{
+    width: 8%;
+}
 
 .card-comment {
   font-weight: bold;
